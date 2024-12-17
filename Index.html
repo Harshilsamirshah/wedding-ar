@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wedding AR Experience</title>
+    <!-- Include A-Frame and AR.js -->
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.2/aframe/build/aframe-ar.min.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+      <!-- Use your wedding card as the custom NFT marker -->
+      <a-nft type="nft" url="marker/marker" smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5">
+        <!-- AR Content: Display an image -->
+        <a-image src="assets/image.jpg" width="2" height="2"></a-image>
+      </a-nft>
+
+      <!-- Camera -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
